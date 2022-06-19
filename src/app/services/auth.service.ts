@@ -29,7 +29,7 @@ logout() {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
   localStorage.setItem('isloggedIn',String(this.isloggedIn));
-  this.router.navigate(['/connexion']);
+  this.router.navigate(['/login']);
 }
 
   SignIn(email:string, password:string){ 
@@ -45,11 +45,15 @@ logout() {
         setTimeout(()=>{
           this.logout();
         },3600000)
-        this.router.navigate(['/accueil'])
-
+        if(result.user.role=="ADMIN"){
+          this.router.navigate(['/dashbord'])
+          return;
+        }
+        this.router.navigate(['/'])
       }
 
       },(err) => {
+        console.log(err)
         this.error.next(1);
       });
   }
@@ -58,7 +62,7 @@ logout() {
     let request = {firstName:form.nom, lastName:form.prenom, username:form.email, password:form.mdp, phone:form.telephone,address:form.address, role:form.role};
     console.log(request);
     return this.http.post(this.url+"register",request).subscribe((result:any) => {
-      this.router.navigate(['/connexion']);
+      this.router.navigate(['/login']);
     })
   }
 
@@ -89,7 +93,7 @@ logout() {
   isRH():Boolean{
     if(this.loggedUser){
 
-    if (this.loggedUser["role"] == 'RH') 
+    if (this.loggedUser["role"] == 'RECRUTER') 
        return true;
     }
     return false;

@@ -421,6 +421,12 @@
   border: 1px solid #57b846;
     border-color:#57b846 !important;
     }
+
+    .error{
+      color: #c80000;
+      text-align: center;
+      margin-top:20px;
+    }
   
   .alert-validate::after {
     content: "\f06a";

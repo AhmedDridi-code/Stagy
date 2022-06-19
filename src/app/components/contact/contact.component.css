@@ -1,0 +1,26 @@
+
+.container h1 {
+    text-align: center;
+    font-size : 3rem;
+    color: #0A2558;
+    font-family: 'Playfair Display', Cursive ;
+    line-height: 1.9;}
+    .container .fa{
+        color:#30709C;
+    }
+    .container .btn{
+        color:#FFFFFF;
+        background-color:#0A2558;
+    }
+    .container .form-group{
+        color:#050505;
+        font-size: 1.3rem;
+    }
+
+
+    .form-invalid{
+        border-color: #ED4337  !important;
+        }
+    .form-valid{
+        border-color:#23DC3D !important;
+        }

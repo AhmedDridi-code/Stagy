@@ -23,8 +23,11 @@ export class JobService {
   ajouterJob( offre: any){
     return this.http.post(this.url+"offre/create/"+this.auth.loggedUser.id,offre);
   }
+  changeJob( id: any){
+    return this.http.get(this.url+"offre/closed/"+id);
+  }
 
-  deleteJob( id: string){
+  deleteJob( id: number){
     return this.http.delete(this.url+"offre/delete/"+id);
   }
 }

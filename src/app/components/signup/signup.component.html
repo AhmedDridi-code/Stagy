@@ -5,7 +5,7 @@
                 Sign Up
             </span>
             <form class="row" [formGroup]="signupForm">
-                <div class="col-md-5 mr-5">
+                <div class="col">
 
 
                     <div class="" data-tilt>
@@ -44,7 +44,7 @@
 
 
                 </div>
-                <div class="col-md-5">
+                <div class="col ml-5">
                     <div class="wrap-input100 " data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="text" name="prenom" placeholder="Prenom" formControlName="prenom"
                             [ngClass]="{'form-invalid':signupForm.controls['prenom'].touched && signupForm.controls['prenom'].errors?.['required'] || invalid,'form-valid':signupForm.controls['prenom'].touched && !signupForm.controls['prenom'].errors?.['required']}">

@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/auth.service';
 import { JobService } from 'src/app/services/job.service';
 import { PostulationService } from 'src/app/services/postulation.service';
+import { PopupComponent } from '../popup/popup.component';
 
 @Component({
   selector: 'app-home',
@@ -33,10 +34,11 @@ export class HomeComponent implements OnInit {
   this.service=service
     }
     postuler(offreId:number){
-      this.postulService.addPostulation(offreId).subscribe((result:any)=>{
+      this.postulService.verifyPostulation(offreId).subscribe((result:any)=>{
           console.log(result);
-          /*this.dialog.open(PopupComponent, {
+          this.dialog.open(PopupComponent, {
             data: {
+              offreId:offreId,
               message: result.message,
             },
           });
@@ -46,7 +48,7 @@ export class HomeComponent implements OnInit {
             message: error.error.message,
             error: error.error.failed,
           },
-        });*/
+        });
       })
     }
 }

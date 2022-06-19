@@ -34,8 +34,10 @@
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>
+                <p *ngIf="erreur" class="error">Email ou Mot de passe erroné</p>
             </form>
-            <p *ngIf="erreur" style="color: #c80000">Email ou Mot de passe erroné</p>
+            
         </div>
+        
     </div>
 </div>

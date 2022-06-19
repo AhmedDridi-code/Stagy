@@ -20,4 +20,8 @@ return this.http.post(this.url+"contact",contact);
     return this.http.get(this.url+"contact");
       }
 
+  deleteContact(id:number){
+        return this.http.delete(this.url+"contact"+"/"+id);
+      }
+
 }

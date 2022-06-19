@@ -2,8 +2,11 @@ h1{
     margin-left: 10px;
     font-size:32px;
     cursor: pointer;
-    font-family: "Source Sans Pro";
-    color: #585858;
+    font-family: "Playfair Display";
+    color: #FFFFFF;
+}
+mat-toolbar{
+    background-color: #0A2558;
 }
 
 .cont{
@@ -16,7 +19,8 @@ h1{
 
   .userImage {
       border-radius: 50%;
-      width: 30%;
+      width: 50px;
+        margin-left: 50px;
   }
 
   .userButton{
@@ -30,11 +34,13 @@ h1{
       border: none;
       font-size: 2em;
         margin:0 5%;
-        color: #585858;
+        color: #FFF;
 
   }
 
   .navItem{
+    font-family: "Source Sans Pro";
+    color: #FFF;
         cursor:pointer;
 
   }
