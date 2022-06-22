@@ -36,12 +36,15 @@ import { ProfileComponent } from './components/profile/profile.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchByNamePipe } from './pipes/search-by-name.pipe';
-import { DashContactComponent } from './comonents/dash-contact/dash-contact.component';
+
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { FormsModule } from '@angular/forms';
 import { CvComponent } from './components/cv/cv.component';
 import { SearchOffreByPipe } from './pipes/search-offre-by.pipe';
+import { EtudiantPipe } from './pipes/etudiant.pipe';
+import { DashContactComponent } from './components/dash-contact/dash-contact.component';
+import { ContactPipe } from './pipes/contact.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +73,9 @@ import { SearchOffreByPipe } from './pipes/search-offre-by.pipe';
     DashContactComponent,
     EditProfileComponent,
     CvComponent,
-    SearchOffreByPipe
+    SearchOffreByPipe,
+    EtudiantPipe,
+    ContactPipe
   ],
   imports: [
     BrowserModule,

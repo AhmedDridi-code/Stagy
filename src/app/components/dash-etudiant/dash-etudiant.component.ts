@@ -65,5 +65,10 @@ this.offersCount=response.length;
     this.router.navigate(["/cv"]);
   
   }
+  filter(){
+    this.router.navigate(['/myPostulations'])
+  }
+
+
 
 }

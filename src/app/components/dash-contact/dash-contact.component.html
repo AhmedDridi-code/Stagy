@@ -6,7 +6,7 @@
         </div>
         <div class="search-box">
             <input type="text" placeholder="Search..." #search>
-            <i class='bx bx-search'></i>
+            <i class='bx bx-search' routerLink='/dashbord/contact'></i>
         </div>
     </nav>
 
@@ -56,7 +56,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let contact of contacts">
+                            <tr *ngFor="let contact of contacts | contact:search.value">
                                  <td>{{contact?.name}}</td>
                                  <td>{{contact?.email}}</td>
                                  <td>{{contact?.phone}}</td>

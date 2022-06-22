@@ -33,8 +33,20 @@
             <i class='bx bx-menu sidebarBtn'></i>
             <span class="dashboard">Dashboard</span>
         </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." #input>
+            <i class='bx bx-search' routerLink="/myPostulations"></i>
+        </div>
+        <div class="profile-details">
+            <!--<img src="images/profile.jpg" alt="">-->
+            <span class="admin_name">Status: </span>
+            <select class="form-select" #select (change)="filter()">
+                <option value="" selected>Status</option>
+                <option value="pending" >Pending</option>
+                <option value="accepted" >Accepted</option>
+            </select>
+        </div>
     </nav>
-
     <div class="home-content">
         <div class="overview-boxes">
             <div class="box">
@@ -87,7 +99,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let postulation of postulations">
+                            <tr *ngFor="let postulation of postulations | etudiant:select.value: input.value">
                                 <td><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" width="100" class="user-img "></td>
                                 <td>{{postulation.user.firstName}}</td>
                                 <td>{{postulation.user.lastName}}</td>

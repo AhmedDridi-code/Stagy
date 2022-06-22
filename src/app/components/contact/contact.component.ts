@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
     if(this.contactForm.valid) {
       console.log(this.contactForm.value);
       this.contactService.addContact(this.contactForm.value).subscribe(contact =>{
-        this.router.navigate(['/accueil']);
+        this.router.navigate(['/']);
       })
     }else{
       this.invalid=true;
